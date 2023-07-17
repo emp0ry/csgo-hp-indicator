@@ -1,4 +1,5 @@
 import telnetlib
+import ctypes
 import time
 
 def main():
@@ -24,6 +25,8 @@ def main():
             time.sleep(1)
 
 if __name__ == '__main__':
+    ctypes.windll.msvcrt.system(ctypes.c_char_p('cls'.encode())) # clear console
+
     print('''
 █░█ █▀█   █ █▄░█ █▀▄ █ █▀▀ ▄▀█ ▀█▀ █▀█ █▀█
 █▀█ █▀▀   █ █░▀█ █▄▀ █ █▄▄ █▀█ ░█░ █▄█ █▀▄
